@@ -5,9 +5,13 @@
     <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <title>S.AI</title>-->
-
+    <link rel="manifest" href="/site.webmanifest">-->
+    <title>S.AI</title>
+</head>
+    <div class="s1">
+        <a class="s2" href="{% url 'base' %}" >S.AI</a>
+        <a class="s3" href="{% url 'login' %}">Вход</a>
+    </div>
     <style>
         .s1{
             margin: 20px;
@@ -55,24 +59,13 @@
             width: 600px;
         }
     </style>
-    <!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
-
-</head>
-<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
-    <div class="s1">
-        <a class="s2" href="{ % url 'base.html' % }" >S.AI</a>
- <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>-->
-        <a class="s3" href="#">Вход</a>
-    </div>
     <div class="s6" align="right">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_0T1oLM.json"  background="transparent"  speed="1"    loop  autoplay></lottie-player>
     </div>
     <p class="s4" align="left" >Давай развиваться вместе!</p>
 
-    <form>
+    <form action="{% url 'login' %}">
         <p><button class="s5">Присоединиться</button></p>
     </form>
 

@@ -11,6 +11,7 @@
     <div class="s1">
         <a class="s2" href="{% url 'base' %}" >S.AI</a>
         <a class="s3" href="{% url 'login' %}">Вход</a>
+        <a class="s3" href="{% url 'registration' %}">Регистрация</a>
     </div>
     <style>
         .s1{
@@ -27,11 +28,17 @@
             text-decoration: none;
             color: #333333;
         }
+        .s2:hover{
+            color: black;
+        }
         .s3{
             margin: 10px;
             text-decoration: none;
             color: #333333;
             float: right;
+        }
+        .s3:hover{
+            color: #2f6abf;
         }
         .s4{
             font-family: Circe;
@@ -53,22 +60,24 @@
             position: absolute;
             left: 150px;
         }
+        .s5:hover{
+            background: #0e2c96;
+        }
         .s6{
             margin-right: 100px;
             float: right;
             width: 600px;
         }
+
     </style>
     <div class="s6" align="right">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_0T1oLM.json"  background="transparent"  speed="1"    loop  autoplay></lottie-player>
     </div>
-    <p class="s4" align="left" >Давай развиваться вместе!</p>
+    <p class="s4" align="left" >Давайте развиваться вместе!</p>
 
-    <form action="{% url 'login' %}">
+    <form action="{% url 'registration' %}">
         <p><button class="s5">Присоединиться</button></p>
     </form>
-
-
 </body>
 </html>

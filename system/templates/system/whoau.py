@@ -72,4 +72,5 @@
     <form name="b2" action="{% url 'empl' %}">
         <button type="submit" class="r2">Сотрудник</button>
     </form>
+ </html>
 

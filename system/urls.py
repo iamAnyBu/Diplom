@@ -12,4 +12,6 @@ urlpatterns = [
     path('whoau/', views.whoau, name='whoau'),
     path('shef/', views.shef, name='shef'),
     path('empl/', views.empl, name='empl'),
+    path('anketa/', views.anketa, name='anketa'),
+    path('test/', views.test, name='test'),
 ]

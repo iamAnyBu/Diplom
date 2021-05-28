@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
-from system.forms import UserRegisterForm, UserLoginForm
+from system.forms import UserRegisterForm, UserLoginForm, ClientForm, CheckForm
 from django.contrib.auth import login as dj_login, logout as log
+
+from system.models import Question
+
 
 def base(request):
     return render(request, 'system/base.html')
@@ -42,3 +45,17 @@ def registration(request):
     else:
         form = UserRegisterForm()
     return render(request, 'system/registration.html', {"form": form})
+
+def anketa(request):
+    form = ClientForm()
+    if request.method == 'POST':
+        print(request.POST)
+        form = ClientForm(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form': form}
+    return render(request, 'system/anketa.html', context)
+
+
+def test(request):
+    return render(request, 'system/test.html')

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from system.forms import UserRegisterForm, UserLoginForm, ClientForm, CheckForm
 from django.contrib.auth import login as dj_login, logout as log
 
-from system.models import Question
+from system.models import Question, Program
 
 
 def base(request):
@@ -59,3 +59,11 @@ def anketa(request):
 
 def test(request):
     return render(request, 'system/test.html')
+
+
+def plan(request):
+    article = Program.objects.all()
+    context = {
+        'articles': article
+    }
+    return render(request, 'system/plan.html', context)

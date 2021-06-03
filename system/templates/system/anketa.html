@@ -9,7 +9,7 @@
     <title>S.AI</title>
 </head>
     <div class="s1">
-        <a class="s2" href="{% url 'base' %}" >S.AI</a>
+        <a class="s2" href="{% url 'base_login' %}" >S.AI</a>
     </div>
  <style>
         .s1{
@@ -48,6 +48,22 @@
         button:hover{
             background: #0e2c96;
         }
+        .r1_2{
+
+            font-family: Circe;
+            font-size: 18px;
+            height: 60px;
+            width: 200px;
+            border-radius: 100px;
+            background: #2f6abf;
+            color: #f6f6f6;
+            border: none;
+            position: absolute;
+            left: 680px;
+
+
+        }
+
         .r2{
             font-family: Circe;
             font-size: 18px;
@@ -100,13 +116,29 @@
 </table>
 <div class="v3">
 <h2>Что вы умеете?</h2>
-<label for="q1">Автозаполнение данных</label>
+    <form1 method="post">
+        <p>Автозаполнение данных</p>
+            <div>
+            <input type="radio" id="Choice1"  name="vibor" value="yes">
+            <label for="Choice1">Умею</label>
+            <input type="radio" id="Choice2" name="vibor" value="want">
+            <label for="Choice2">Хочу научиться</label>
+            <input type="radio" id="Choice3" name="vibor" value="net">
+            <label for="Choice3">Не востребовано</label>
+            </div>
+        <p>Сводные таблицы</p>
+            <div>
+            <input type="radio" id="Choice1"  name="vibor2" value="yes">
+            <label for="Choice1">Умею</label>
+            <input type="radio" id="Choice2" name="vibor2" value="want">
+            <label for="Choice2">Хочу научиться</label>
+            <input type="radio" id="Choice3" name="vibor2" value="net">
+            <label for="Choice3">Не востребовано</label>
+            </div>
+    </form1>
+<button type="submit" class="r1_2">Отправить</button>
+</div>
 
-<ul>
-    <li class="v1"><label for="q1"><input type="radio" name="q" value="da" required id="q1_1">Умею</label> </li>
-    <li class="v1"><label><input type="radio" name="q" value="net" required id="q1_2">Хочу научиться</label></li>
-    <li class="v1"><label><input type="radio" name="q" value="idk" required id="q1_3">Не востребовано</label></li>
-</ul></div>
 
 
 </html>

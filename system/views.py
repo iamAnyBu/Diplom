@@ -1,8 +1,9 @@
+from django.forms import ModelForm, forms
 from django.shortcuts import render, redirect
 from system.forms import UserRegisterForm, UserLoginForm, ClientForm, CheckForm
 from django.contrib.auth import login as dj_login, logout as log
 
-from system.models import Question, Program
+from system.models import Question, Program, FormVarAnswer
 
 
 def base(request):
@@ -56,6 +57,17 @@ def anketa(request):
     context = {'form': form}
     return render(request, 'system/anketa.html', context)
 
+def anketa_ch(request):
+    form1 = CheckForm()
+    if request.method == 'POST':
+        print(request.POST)
+        form1 = CheckForm(request.POST)
+        if form1.is_valid():
+            form1.save()
+    context = {'form1': form1}
+    return render(request, 'system/anketa.html', context)
+
+
 
 def test(request):
     return render(request, 'system/test.html')
@@ -66,4 +78,5 @@ def plan(request):
     context = {
         'articles': article
     }
+
     return render(request, 'system/plan.html', context)
